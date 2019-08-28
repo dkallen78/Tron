@@ -1,0 +1,361 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 98vw;
+}
+
+main {
+  overflow-x: hidden;
+  width: 98vw;
+  margin-top: 5em;
+}
+
+/*---------------------------------------------------------------//
+// Top Navigation Menu                                           //
+//---------------------------------------------------------------*/
+
+/*
+Container for the navigation bar*/
+.navBar {
+  position: fixed;
+  top: 0%;
+  background-image: linear-gradient(to left, blue, DodgerBlue);
+  color: white;
+  width: 98vw;
+  font-size: 2.25vw;
+  font-family: sans-serif;
+}
+
+#tronLogo {
+  height: 3vw;
+  padding: .4vw;
+}
+
+.navBar a {
+  float: right;
+  color: white;
+  text-decoration: none;
+  padding: .5em .5em 0 .5em;
+}
+
+.navBar a:hover, .dropdown:hover {
+  background-color: DodgerBlue;
+}
+
+.dropdown {
+  padding: .5em .5em 0 .5em;
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: solid blue;
+  border-width: 0 1px 1px 1px;
+}
+
+.dropdown-content a {
+  float: left;
+  color: black;
+  width: 82%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*---------------------------------------------------------------//
+// Fixed background elements                                     //
+//---------------------------------------------------------------*/
+
+/*
+Class for the fixed background portions of the page*/
+.fixedBackground {
+  min-height: 90vh;
+  width: 98vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+/*
+Each of these assigns the specific image to the background sections*/
+
+/*---------------------------------------------------------------//
+// Intro Image                                                   //
+//---------------------------------------------------------------*/
+
+.fixedBackground:nth-child(2) {
+  background-image: url("tron logo color.png");
+  background-size: 50vw;
+}
+
+/*---------------------------------------------------------------//
+// Product Image                                                 //
+//---------------------------------------------------------------*/
+
+.fixedBackground:nth-child(4) {
+  background-image: url("index.jpg");
+}
+
+/*---------------------------------------------------------------//
+// Contact us Image                                              //
+//---------------------------------------------------------------*/
+
+.fixedBackground:nth-child(6) {
+  background-image: url("officePhone.jpg");
+}
+
+/*---------------------------------------------------------------//
+// About us image                                                //
+//---------------------------------------------------------------*/
+
+.fixedBackground:nth-child(8) {
+  background-image: url("teamImage.jpg");
+}
+
+
+.fixedBackground:nth-child(10) {
+  background-image: url("IMG_7695.jpg");
+}
+
+.standardContent {
+  min-height: 90vh;
+  padding: 1%;
+  background-image: linear-gradient(to left, blue, DodgerBlue);
+}
+
+#conocenosBox {
+
+}
+
+#conocenosContent {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1.5em;
+  background-color: white;
+}
+
+#conocenosContent h3 {
+  margin: 0;
+  padding: 5px;
+  color: white;
+  background-image: linear-gradient(to right, blue, dodgerblue, white);
+  border-radius: 5px;
+}
+
+#conocenosContent p {
+  margin-top: 0;
+  text-indent: 1em;
+}
+
+/*---------------------------------------------------------------//
+// Productos                                                     //
+//---------------------------------------------------------------*/
+
+.productDiv:first-of-type {
+  margin-top: 5em;
+}
+
+.productDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  width: 80%;
+  margin: 1% auto;
+  /*border: 1px solid black;
+  border-radius: 5px;*/
+  padding: .5%;
+}
+
+.productImage {
+  display: inline-block;
+  margin: auto 0;
+  /*border: 1px solid black;*/
+}
+
+.productImage img {
+  height: 38vh;
+}
+
+.productDescription {
+  display: inline-block;
+  width: 100%;
+  margin-left: .5%;
+  padding: .25%;
+  /*border: 1px solid black;
+  border-radius: 5px;*/
+  font-size: 1.5em;
+}
+
+.productDescription h3 {
+  margin: 0;
+  padding: 5px;
+  color: white;
+  background-image: linear-gradient(to right, blue, dodgerblue, white);
+  border-radius: 5px;
+}
+
+#moscaDiv {
+  width: 98vw;
+}
+
+/*---------------------------------------------------------------//
+// Contactanos Page                                              //
+//---------------------------------------------------------------*/
+
+#contactBox {
+  margin-top: 6em;
+  width: 98vw;
+}
+
+#contactBox input[type=text], select, textarea {
+  width: 100%;
+  padding: 1%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  resize: vertical;
+  font-size: 1.5em;
+}
+
+#contactBox input[type=submit] {
+  background-color: blue;
+  color: white;
+  padding: .5% 1%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 2em;
+  transition: all 250ms;
+}
+
+#contactBox input[type=submit]:hover {
+  background-color: dodgerblue;
+
+}
+
+#contactBox form {
+  margin: 0 auto;
+  width: 80%;
+}
+
+#contactBox label {
+  font-size: 2em;
+  padding: 5px;
+  color: white;
+  background-image: linear-gradient(to right, blue, dodgerblue);
+  border-radius: 5px;
+
+}
+
+
+/*#productos {
+  height: 70%;
+}
+
+#productBrowser {
+  position: relative;
+  height: 100%;
+  width: 200%;
+  left: -50%;
+  padding: 1em;
+  background-image: linear-gradient(to left, blue, #ccccff);
+}
+
+
+#productButtons {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  top: 45%;
+  z-index: 2;
+}
+
+#productButtons button {
+  font-family: monospace;
+  font-size: 4em;
+  font-weight: bold;
+  color: white;
+  background-color: DodgerBlue;
+  border: 2px solid red;
+  border-radius: 5px;
+  transition: all 250ms;
+
+}
+
+#productButtons button:hover {
+  background-color: SkyBlue;
+}
+
+#leftButton {
+  float: left;
+}
+
+#rightButton {
+  float: right;
+}
+
+.productTitle {
+  text-align: center;
+  font-size: 1.75em;
+  font-weight: bold;
+  font-family: sans-serif;;
+}
+
+#menuDivs {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  top: -5%;
+  height: 90%;
+  width: 100%;
+}
+
+#menuDivLeft, #menuDivMiddle, #menuDivRight {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px black;
+  transition: all 500ms;
+}
+
+#menuDivLeft {
+  left: -100%;
+}
+
+#menuDivMiddle {
+
+}
+
+#menuDivRight {
+  right: 100%;
+}
+
+.menuImg {
+  height: 90%;
+  z-index: 1;
+}
+
+#vendorMap {
+  width: 98vw;
+}*/
