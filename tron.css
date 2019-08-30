@@ -8,7 +8,6 @@ body {
 
 main {
   overflow-x: hidden;
-  width: 98vw;
   margin-top: 5em;
 }
 
@@ -93,7 +92,7 @@ Each of these assigns the specific image to the background sections*/
 // Intro Image                                                   //
 //---------------------------------------------------------------*/
 
-.fixedBackground:nth-child(2) {
+#introFixed {
   background-image: url("tron logo color.png");
   background-size: 50vw;
 }
@@ -102,7 +101,7 @@ Each of these assigns the specific image to the background sections*/
 // Product Image                                                 //
 //---------------------------------------------------------------*/
 
-.fixedBackground:nth-child(4) {
+#productosFixed {
   background-image: url("index.jpg");
 }
 
@@ -134,14 +133,15 @@ Each of these assigns the specific image to the background sections*/
 }
 
 #conocenosBox {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 #conocenosContent {
   width: 90%;
-  margin: 0 auto;
   padding: 5px;
-  border: 1px solid black;
   border-radius: 5px;
   font-size: 1.5em;
   background-color: white;
