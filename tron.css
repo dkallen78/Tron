@@ -4,6 +4,7 @@ html {
 
 body {
   width: 98vw;
+  font-family: sans-serif;
 }
 
 main {
@@ -15,60 +16,165 @@ main {
 // Top Navigation Menu                                           //
 //---------------------------------------------------------------*/
 
-/*
-Container for the navigation bar*/
-.navBar {
-  position: fixed;
-  top: 0%;
-  background-image: linear-gradient(to left, blue, DodgerBlue);
-  color: white;
-  width: 98vw;
-  font-size: 2.25vw;
-  font-family: sans-serif;
-}
+/*@media only screen and (min-width: 769px) {
+  /*
+  Container for the navigation bar*/
+  .navBar {
+    position: fixed;
+    top: 0%;
+    background-image: linear-gradient(to left, blue, DodgerBlue);
+    color: white;
+    width: 98vw;
+    font-size: 2.25vw;
+  }
 
-#tronLogo {
-  height: 3vw;
-  padding: .4vw;
-}
+  #tronLogo {
+    height: 3vw;
+    padding: .4vw;
+  }
 
-.navBar a {
-  float: right;
-  color: white;
-  text-decoration: none;
-  padding: .5em .5em 0 .5em;
-}
+  .navBar > a {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: .1em .1em;
+    box-shadow: inset .05em .05em white,
+                inset -.05em -.05em darkblue;
+    background-image: linear-gradient(blue, white);
+    text-shadow: 2px 0px black,
+                 0px 2px black;
+  }
 
-.navBar a:hover, .dropdown:hover {
-  background-color: DodgerBlue;
-}
+  .navBar a {
+    float: right;
+    color: white;
+    text-decoration: none;
+    padding: .25em;
+    transition: 500ms;
+  }
 
-.dropdown {
-  padding: .5em .5em 0 .5em;
-  float: right;
-  position: relative;
-  display: inline-block;
-}
+  .navBar a:hover, .dropdown:hover {
+    background-color: FireBrick;
+  }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border: solid blue;
-  border-width: 0 1px 1px 1px;
-}
+  .dropdown {
+    padding: .25em;
+    float: right;
+    position: relative;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: .1em .1em;
+    box-shadow: inset .05em .05em white,
+                inset -.05em -.05em darkblue;
+    cursor: pointer;
+    background-image: linear-gradient(blue, white);
+    text-shadow: 2px 0px black,
+                 0px 2px black;
+  }
 
-.dropdown-content a {
-  float: left;
-  color: black;
-  width: 82%;
-}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 3.65vw;
+    left: -.05em;
+    background-image: linear-gradient(white, red);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: solid black;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 .2em .2em;
+  }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+  .dropdown-content a {
+    float: left;
+    color: white !important;
+    width: 90.25%;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/*}*/
+
+
+@media only screen and (max-width: 768px) {
+  .navBar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: fixed;
+    top: 90vh;
+    height: 10vh;
+    background-image: linear-gradient(to left, blue, DodgerBlue);
+    color: white;
+    width: 98vw;
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  #tronLogo {
+    display: none;
+  }
+
+  .navBar > a {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: .1em .1em;
+    box-shadow: inset .05em .05em white,
+                inset -.05em -.05em darkblue;
+    background-image: linear-gradient(blue, white);
+    text-align: center;
+    text-shadow: 2px 0px black,
+                 0px 2px black;
+    flex-basis: 20vw;
+    align-self: center;
+    height: 7vh;
+  }
+
+  .navBar a {
+    float: right;
+    color: white;
+    text-decoration: none;
+    padding: .25em;
+    transition: 500ms;
+  }
+
+  .dropdown {
+    padding: .25em;
+    float: right;
+    position: relative;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: .1em .1em;
+    box-shadow: inset .05em .05em white,
+                inset -.05em -.05em darkblue;
+    cursor: pointer;
+    background-image: linear-gradient(blue, white);
+    text-align: center;
+    text-shadow: 2px 0px black,
+                 0px 2px black;
+    flex-basis: 20vw;
+    align-self: center;
+    height: 7vh;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 3.65vw;
+    left: -.05em;
+    background-image: linear-gradient(white, red);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: solid black;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 .2em .2em;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
 }
 
 /*---------------------------------------------------------------//
@@ -78,7 +184,7 @@ Container for the navigation bar*/
 /*
 Class for the fixed background portions of the page*/
 .fixedBackground {
-  min-height: 90vh;
+  min-height: 100vh;
   width: 98vw;
   background-size: cover;
   background-repeat: no-repeat;
@@ -87,6 +193,12 @@ Class for the fixed background portions of the page*/
 }
 /*
 Each of these assigns the specific image to the background sections*/
+
+.spacer {
+  padding-top: 5vw !important;
+  /*margin-top: -5vw;*/
+}
+
 
 /*---------------------------------------------------------------//
 // Intro Image                                                   //
@@ -102,15 +214,94 @@ Each of these assigns the specific image to the background sections*/
 //---------------------------------------------------------------*/
 
 #productosFixed {
-  background-image: url("index.jpg");
+  background-image: url("productLineup.jpg");
+}
+
+#productBox {
+  display: grid;
+  grid-template-columns: 20vw 20vw;
+  grid-template-rows: 28.6vw 28.6vw;
+  grid-gap: 1em;
+  max-width: 98vw;
+  justify-content: center;
+  align-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  #productBox {
+    display: grid;
+    grid-template-columns: 40vw;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    max-width: 98vw;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .productCategory {
+    border: .3em solid black;
+    border-radius: .5em;
+  }
+
+  .productCategory img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5em;
+  }
+}
+
+.productCategory {
+  border: .3em solid black;
+  border-radius: .5em;
+}
+
+.productCategory img {
+  width: 100%;
+  height: 100%;
+  border-radius: .5em;
 }
 
 /*---------------------------------------------------------------//
 // Contact us Image                                              //
 //---------------------------------------------------------------*/
 
-.fixedBackground:nth-child(6) {
-  background-image: url("officePhone.jpg");
+#contactanosFixed {
+  background-image: url("contactUs1.jpg");
+}
+
+@media only screen and (max-width: 768px) {
+  #contactanosFixed {
+    background-image: url("contactUs1small.jpg");
+  }
+}
+
+#contactanosContent {
+  width: 80vw;
+  padding: .5em;
+  font-size: 2em;
+  text-align: center;
+  bo
+
+
+
+
+
+  rder: 2px solid black;
+  border-radius: 5px;
+  background-image: linear-gradient(red, white);
+}
+
+#contactanosContent p {
+  color: white;
+  text-shadow: 2px 0px black,
+               0px 2px black,
+               -2px 0px black,
+               0px -2px black;
+}
+
+#contactanosContent a {
+  color: white;
+  text-decoration: none;
 }
 
 /*---------------------------------------------------------------//
@@ -127,6 +318,9 @@ Each of these assigns the specific image to the background sections*/
 }
 
 .standardContent {
+  display: flex;
+  align-content: center;
+  justify-content: center;
   min-height: 90vh;
   padding: 1%;
   background-image: linear-gradient(to left, blue, DodgerBlue);
@@ -136,7 +330,6 @@ Each of these assigns the specific image to the background sections*/
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
 
 #conocenosContent {
@@ -151,13 +344,14 @@ Each of these assigns the specific image to the background sections*/
   margin: 0;
   padding: 5px;
   color: white;
-  background-image: linear-gradient(to right, blue, dodgerblue, white);
+  /*background-image: linear-gradient(to right, blue, dodgerblue, white);*/
+  background-image: linear-gradient(to right, red, white);
   border-radius: 5px;
 }
 
 #conocenosContent p {
   margin-top: 0;
-  text-indent: 1em;
+  text-align: justify;
 }
 
 /*---------------------------------------------------------------//
@@ -182,12 +376,12 @@ Each of these assigns the specific image to the background sections*/
 
 .productImage {
   display: inline-block;
-  margin: auto 0;
-  /*border: 1px solid black;*/
+  margin: auto 1%;
+  width: 7em;
 }
 
 .productImage img {
-  height: 38vh;
+  width: 100%;
 }
 
 .productDescription {

@@ -2,14 +2,16 @@
   <head>
     <title>Tron Insecticida</title>
     <link rel="stylesheet" type="text/css" href="tron.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   </head>
   <body>
-
     <main id="inicio">
       <nav class="navBar">
-        <!--<a href="#conocenos">Conócenos</a>-->
         <a href="#contactanos">Contáctanos</a>
-        <div class="dropdown">
+        <div class="dropdown" onclick="window.location='#productos'">
           <span>Productos</span>
           <div class="dropdown-content">
             <a href="moscas.html">Moscas</a>
@@ -18,12 +20,13 @@
             <a href="roedores.html">Roedores</a>
           </div>
         </div>
+        <a href="#conocenos">Conócenos</a>
         <a href="#inicio">Inicio</a>
         <img src="tron logo color.png" id="tronLogo">
       </nav>
       <section class="fixedBackground" id="introFixed">
       </section>
-      <section class="standardContent" id="intro">
+      <section class="standardContent spacer" id="conocenos">
         <div id="conocenosBox">
           <div id="conocenosContent">
             <h3>Quiénes Somos</h3>
@@ -60,16 +63,32 @@
       </section>
       <section class="fixedBackground" id="productosFixed">
       </section>
-      <section class="standardContent" id="productos">
+      <section class="standardContent spacer" id="productos">
         <div id="productBox">
+          <div class="productCategory">
+            <a href="moscas.html"><img src="moscasImage.jpg"></a>
+          </div>
+          <div class="productCategory">
+            <a href="rastreros.html"><img src="rastrerosImage.jpg"></a>
+          </div>
+          <div class="productCategory">
+            <a href="mosquitos.html"><img src="mosquitosImage.jpg"></a>
+          </div>
+          <div class="productCategory">
+            <a href="roedores.html"><img src="roedoresImage.jpg"></a>
+          </div>
         </div>
       </section>
-      <section class="fixedBackground" id="contactanos">
+      <section class="fixedBackground" id="contactanosFixed">
       </section>
-      <section class="standardContent">
+      <section class="standardContent spacer" id ="contactanos">
         <div id="contactanosBox">
-          <div id="contactanos">
-            If you want to buy our products or become a distributor please contact us.
+          <div id="contactanosContent">
+            <p><strong>Si deseas adquirir nuestros productos o convertirte en distribuidor,
+               por favor contáctanos:</strong></p>
+            <p>Teléfono: (761) 73-409-93</p>
+            <p>Jilotepec, Estado de México</p>
+            <p>Email: <a href="mailto:tronventas@yahoo.com.mx">tronventas@yahoo.com.mx</a></p>
           </div>
         </div>
       </section>
