@@ -36,14 +36,14 @@ main {
   }
 
   .navBar > a {
-    border: 1px solid black;
+    border: .05em solid black;
     border-radius: .3em;
     margin: .1em .1em;
     box-shadow: inset .05em .05em white,
                 inset -.05em -.05em darkblue;
     background-image: linear-gradient(blue, white);
-    text-shadow: 2px 0px black,
-                 0px 2px black;
+    text-shadow: .1em 0px .1em black,
+                 0px .1em .1em black;
   }
 
   .navBar a {
@@ -68,15 +68,15 @@ main {
     float: right;
     position: relative;
     display: inline-block;
-    border: 1px solid black;
+    border: .05em solid black;
     border-radius: .3em;
     margin: .1em .1em;
     box-shadow: inset .05em .05em white,
                 inset -.05em -.05em darkblue;
     cursor: pointer;
     background-image: linear-gradient(blue, white);
-    text-shadow: 2px 0px black,
-                 0px 2px black;
+    text-shadow: .1em 0px .1em black,
+                 0px .1em .1em black;
   }
 
   .dropdown-content {
@@ -180,16 +180,16 @@ Each of these assigns the specific image to the background sections*/
   font-size: 2em;
   text-align: center;
   border: .1em solid white;
-  border-radius: 5px;
+  border-radius: .3em;
   background-image: linear-gradient(red, white);
 }
 
 #contactanosContent p {
   color: white;
-  text-shadow: 2px 0px black,
-               0px 2px black,
-               -2px 0px black,
-               0px -2px black;
+  text-shadow: .1em 0px .1em black,
+               0px .1em .1em black,
+               -.1em 0px .1em black,
+               0px -.1em .1em black;
 }
 
 #contactanosContent a {
@@ -227,15 +227,15 @@ Each of these assigns the specific image to the background sections*/
 
 #conocenosContent {
   width: 90%;
-  padding: 5px;
-  border-radius: 5px;
+  padding: .3em;
+  border-radius: .3em;
   font-size: 1.5em;
   background-color: white;
 }
 
 #conocenosContent h3 {
   margin: 0;
-  padding: 5px;
+  padding: .1em;
   color: white;
   background-image: linear-gradient(to right, red, white);
   border-radius: .3em;
@@ -432,7 +432,7 @@ Each of these assigns the specific image to the background sections*/
   }
 
   .bottomSpacer {
-    padding-bottom: 5vh;
+    padding-bottom: 10vh;
   }
 
   #introFixed {
