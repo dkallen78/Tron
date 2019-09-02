@@ -238,7 +238,7 @@ Each of these assigns the specific image to the background sections*/
   padding: 5px;
   color: white;
   background-image: linear-gradient(to right, red, white);
-  border-radius: 5px;
+  border-radius: .3em;
 }
 
 #conocenosContent p {
@@ -435,14 +435,18 @@ Each of these assigns the specific image to the background sections*/
     padding-bottom: 5vh;
   }
 
+  #introFixed {
+    background-image: url("fabricaShopSmall.jpg");
+  }
+
   #productosFixed {
     background-image: url("productLineupSmall.jpg");
   }
 
   #productBox {
     display: grid;
-    grid-template-columns: 40vw;
-    grid-template-rows: 57.2vw 57.2vw 57.2vw 57.2vw;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 57.2vw 57.2vw;
     grid-gap: 1em;
     max-width: 98vw;
     justify-content: center;
@@ -467,7 +471,7 @@ Each of these assigns the specific image to the background sections*/
   #contactanosContent {
     width: 80vw;
     padding: .5em;
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: center;
     border: .1em solid white;
     border-radius: 5px;
