@@ -1,5 +1,11 @@
 # Tron
-Website I'm building for Tron Insecticida
+Website I'm building for Tron Insecticida www.TronInsecticida.com
+
+## 2019.09.05
+
+### Update 21:56 (Mexico)
+
+I'm pretty happy with how this is turning out. The site went live yesterday but there were some things I wasn't happy with. One of them was the borders, I like them when getting an idea of where an element is, but they feel very unsophisticated. I'm still having problems with mobile browsers, especially Safari. Hopefully I'll have an implementation for that in the next few days. The next big project is a contact page w/ some PHP going on in the background. My fingers are crossed that it will work.
 
 ## 2019.08.30
 
