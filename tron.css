@@ -12,41 +12,42 @@ main {
   margin-top: 5em;
 }
 
-
-
 /*---------------------------------------------------------------//
 // Top Navigation Menu                                           //
 //---------------------------------------------------------------*/
 
-/*@media only screen and (min-width: 769px) {
-  /*
-  Container for the navigation bar*/
-  .navBar {
+.navBar {
     position: fixed;
-    top: 0%;
-    background-image: linear-gradient(to left, blue, DodgerBlue);
-    color: white;
     width: 98vw;
+    top: 0%;
+    padding: .1em;
+    box-sizing: border-box;
+    color: white;
     font-size: 2.25vw;
+    background-image: linear-gradient(to left, blue, DodgerBlue);
+    border-top: .15em solid red;
   }
 
-  #tronLogo {
-    height: 3vw;
-    padding: .4vw;
+#tronLogo {
+    position: absolute;
+    height: 7vw;
+    padding: 1vw;
   }
 
-  .navBar > a {
+.navBar > a {
     border: .05em solid black;
     border-radius: .3em;
     margin: .1em .1em;
-    box-shadow: inset .05em .05em white,
-                inset -.05em -.05em darkblue;
+    box-shadow: inset .05em .05em .2em white,
+                inset -.05em -.05em .2em darkblue;
+    -webkit-box-shadow: inset .05em .05em .2em white,
+                inset -.05em -.05em .2em darkblue;
     background-image: linear-gradient(blue, white);
     text-shadow: .1em 0px .1em black,
                  0px .1em .1em black;
   }
 
-  .navBar a {
+.navBar a {
     float: right;
     color: white;
     text-decoration: none;
@@ -54,16 +55,17 @@ main {
     transition: 500ms;
   }
 
-  .navBar a:hover, .dropdown:hover {
-    background-color: FireBrick;
+.navBar a:hover, .dropdown:hover {
+    background-color: fireBrick;
+    filter: brightness(130%);
   }
 
-  .dropdown:hover {
+.dropdown:hover {
     border-radius: .3em .3em 0 0;
-    box-shadow: inset .05em .05em white, inset -.05em 0 darkblue;
+    box-shadow: inset .05em .05em .2em white, inset -.05em 0 .2em darkblue;
   }
 
-  .dropdown {
+.dropdown {
     padding: .25em;
     float: right;
     position: relative;
@@ -71,15 +73,16 @@ main {
     border: .05em solid black;
     border-radius: .3em;
     margin: .1em .1em;
-    box-shadow: inset .05em .05em white,
-                inset -.05em -.05em darkblue;
+    box-shadow: inset .05em .05em .2em white,
+                inset -.05em -.05em .2em darkblue;
     cursor: pointer;
     background-image: linear-gradient(blue, white);
     text-shadow: .1em 0px .1em black,
                  0px .1em .1em black;
+    transition: 500ms;
   }
 
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
     width: 99%;
@@ -93,38 +96,40 @@ main {
     border-radius: 0 0 .2em .2em;
   }
 
-  .dropdown-content a {
+.dropdown-content a {
     float: left;
     color: white !important;
     width: 90.25%;
   }
 
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
-
   }
-/*}*/
 
 /*---------------------------------------------------------------//
 // Fixed background elements                                     //
 //---------------------------------------------------------------*/
 
-/*
-Class for the fixed background portions of the page*/
 .fixedBackground {
   min-height: 100vh;
   width: 98vw;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-position: center center;
+  -webkit-background-attachment: fixed;
 }
-/*
-Each of these assigns the specific image to the background sections*/
+
+.blueBackground {
+
+}
 
 .spacer {
   padding-top: 5vw !important;
-  /*margin-top: -5vw;*/
 }
 
 /*---------------------------------------------------------------//
@@ -136,79 +141,16 @@ Each of these assigns the specific image to the background sections*/
 }
 
 /*---------------------------------------------------------------//
-// Product Image                                                 //
-//---------------------------------------------------------------*/
-
-#productosFixed {
-  background-image: url("productLineup.jpg");
-  background-position: left left;
-  background-size: 100%;
-}
-
-#productBox {
-  display: grid;
-  grid-template-columns: 20vw 20vw;
-  grid-template-rows: 28.6vw 28.6vw;
-  grid-gap: 1em;
-  max-width: 98vw;
-  justify-content: center;
-  align-content: center;
-}
-
-.productCategory {
-  border: .3em solid black;
-  border-radius: .5em;
-}
-
-.productCategory img {
-  width: 100%;
-  height: 100%;
-  border-radius: .5em;
-}
-
-/*---------------------------------------------------------------//
-// Contact us Image                                              //
-//---------------------------------------------------------------*/
-
-#contactanosFixed {
-  background-image: url("contactUs1.jpg");
-}
-
-#contactanosContent {
-  width: 80vw;
-  padding: .5em;
-  font-size: 2em;
-  text-align: center;
-  border: .1em solid white;
-  border-radius: .3em;
-  background-image: linear-gradient(red, white);
-}
-
-#contactanosContent p {
-  color: white;
-  text-shadow: .1em 0px .1em black,
-               0px .1em .1em black,
-               -.1em 0px .1em black,
-               0px -.1em .1em black;
-}
-
-#contactanosContent a {
-  color: white;
-  text-decoration: none;
-}
-
-/*---------------------------------------------------------------//
 // About us image                                                //
 //---------------------------------------------------------------*/
 
-.fixedBackground:nth-child(8) {
+/*.fixedBackground:nth-child(8) {
   background-image: url("teamImage.jpg");
 }
 
-
 .fixedBackground:nth-child(10) {
   background-image: url("IMG_7695.jpg");
-}
+}*/
 
 .standardContent {
   display: flex;
@@ -216,7 +158,8 @@ Each of these assigns the specific image to the background sections*/
   justify-content: center;
   min-height: 90vh;
   padding: 1%;
-  background-image: linear-gradient(to left, blue, DodgerBlue);
+  background-color: blue;
+  background-image: url("bugBackground.png"), linear-gradient(to left, blue, DodgerBlue);
 }
 
 #conocenosBox {
@@ -227,10 +170,11 @@ Each of these assigns the specific image to the background sections*/
 
 #conocenosContent {
   width: 90%;
-  padding: .3em;
+  padding: .5em;
   border-radius: .3em;
-  font-size: 1.5em;
+  font-size: 2em;
   background-color: white;
+  box-shadow: inset .1em .1em .5em black;
 }
 
 #conocenosContent h3 {
@@ -246,13 +190,117 @@ Each of these assigns the specific image to the background sections*/
   text-align: justify;
 }
 
+#conocenosContent ul {
+  list-style: disc inside url("redCheck.png");
+}
+
+/*---------------------------------------------------------------//
+// Product Image                                                 //
+//---------------------------------------------------------------*/
+
+#productosFixed {
+  background-image: url("productLineup.jpg");
+  background-position: center bottom;
+  background-size: 100%;
+}
+
+#productBox {
+  display: grid;
+  grid-template-columns: 20vw 20vw;
+  grid-template-rows: 28.6vw 28.6vw;
+  grid-gap: 1em;
+  max-width: 98vw;
+  justify-content: center;
+  align-content: center;
+}
+
+.productCategory {
+  border-radius: .5em;
+  cursor: pointer;
+  box-shadow: inset .1em .1em 1em black;
+}
+
+.productCategory:nth-child(1) {
+  background-image: url("moscasImage.jpg");
+  background-size: cover;
+}
+
+.productCategory:nth-child(2) {
+  background-image: url("rastrerosImage.jpg");
+  background-size: cover;
+}
+
+.productCategory:nth-child(3) {
+  background-image: url("mosquitosImage.jpg");
+  background-size: cover;
+}
+
+.productCategory:nth-child(4) {
+  background-image: url("roedoresImage.jpg");
+  background-size: cover;
+}
+
+.productCategory img {
+  width: 100%;
+  height: 100%;
+  border-radius: .5em;
+}
+
+/*---------------------------------------------------------------//
+// Contact us Image                                              //
+//---------------------------------------------------------------*/
+
+#contactanosFixed {
+  background-image: url("contactUs.jpg");
+}
+
+#contactanosContent {
+  width: 80vw;
+  padding: .5em;
+  font-size: 2em;
+  text-align: center;
+  border-radius: .3em;
+  background-image: linear-gradient(red, red, white);
+  box-shadow: inset .1em .1em .5em black;
+}
+
+#contactanosContent p {
+  color: white;
+  text-shadow: .1em .1em .1em black;
+}
+
+/*#contactanosContent p:nth-child(3)::before {
+  content: url("jiloWhite.png");
+  position: relative;
+  top: .5em;
+}
+
+#contactanosContent p:nth-child(3)::after {
+  content: url("jiloWhite.png");
+  position: relative;
+  top: .5em;
+  margin-left: .2em;
+}*/
+
+#contactanosContent p:nth-child(4) {
+  font-weight: bold;
+}
+
+#contactanosContent p:nth-child(4) a {
+  font-weight: bold;
+}
+
+#contactanosContent a {
+  color: white;
+  text-decoration: none;
+}
 
 /*---------------------------------------------------------------//
 // Productos                                                     //
 //---------------------------------------------------------------*/
 
 .productDiv:first-of-type {
-  margin-top: 5em;
+  margin-top: 10em;
 }
 
 .productDiv {
@@ -289,12 +337,17 @@ Each of these assigns the specific image to the background sections*/
   margin: 0;
   padding: 5px;
   color: white;
-  background-image: linear-gradient(to right, blue, dodgerblue, white);
+  background-image: linear-gradient(to right, blue, dodgerblue, rgba(0, 0, 0, 0));
   border-radius: 5px;
 }
 
-#moscaDiv {
-  width: 98vw;
+.productDescription ul {
+  list-style: disc outside url("blueCheck.png");
+}
+
+.productPage {
+  background-image: url("bugBackgroundBlack.png");
+  background-attachment: fixed;
 }
 
 /*---------------------------------------------------------------//
@@ -348,23 +401,25 @@ Each of these assigns the specific image to the background sections*/
 
 }
 
+/*---------------------------------------------------------------//
+// Cellphone Styles                                              //
+//---------------------------------------------------------------*/
+
 @media only screen and (max-width: 768px) {
   main {
-    overflow-x: hidden;
+    margin-top: 0;
   }
 
   .navBar {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    position: fixed;
     top: 90vh;
     height: 10vh;
-    background-image: linear-gradient(to left, blue, DodgerBlue);
-    color: white;
-    width: 98vw;
+    padding: 0;
     font-size: 4vw;
     text-align: center;
+    border-top: none;
   }
 
   #tronLogo {
@@ -372,47 +427,22 @@ Each of these assigns the specific image to the background sections*/
   }
 
   .navBar > a {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: .1em .1em;
-    box-shadow: inset .05em .05em white,
-                inset -.05em -.05em darkblue;
-    background-image: linear-gradient(blue, white);
-    text-align: center;
-    text-shadow: 2px 0px black,
-                 0px 2px black;
     flex-basis: 20vw;
     align-self: center;
     height: 7vh;
-  }
-
-  .navBar a {
-    float: right;
-    color: white;
-    text-decoration: none;
-    padding: .25em;
-    transition: 500ms;
   }
 
   .dropdown {
-    padding: .25em;
-    float: right;
-    position: relative;
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: .1em .1em;
-    box-shadow: inset .05em .05em white,
-                inset -.05em -.05em darkblue;
-    cursor: pointer;
-    background-image: linear-gradient(blue, white);
-    text-align: center;
-    text-shadow: 2px 0px black,
-                 0px 2px black;
     flex-basis: 20vw;
     align-self: center;
     height: 7vh;
   }
+
+  .dropdown:hover {
+      border-radius: .3em;
+      box-shadow: inset .05em .05em white,
+                  inset -.05em -.05em darkblue;
+    }
 
   .dropdown-content {
     display: none;
@@ -431,12 +461,24 @@ Each of these assigns the specific image to the background sections*/
     display: none;
   }
 
+  .spacer {
+    padding-top: 0;
+  }
+
   .bottomSpacer {
     padding-bottom: 10vh;
   }
 
   #introFixed {
     background-image: url("fabricaShopSmall.jpg");
+  }
+
+  #conocenosContent {
+    font-size: 1em;
+  }
+
+  #conocenosContent h3 {
+    padding: .3em;
   }
 
   #productosFixed {
@@ -453,11 +495,6 @@ Each of these assigns the specific image to the background sections*/
     align-content: center;
   }
 
-  .productCategory {
-    border: .3em solid black;
-    border-radius: .5em;
-  }
-
   .productCategory img {
     width: 100%;
     height: 100%;
@@ -465,33 +502,24 @@ Each of these assigns the specific image to the background sections*/
   }
 
   #contactanosFixed {
-    background-image: url("contactUs1small.jpg");
+    background-image: url("contactUsSmall.jpg");
   }
 
   #contactanosContent {
-    width: 80vw;
-    padding: .5em;
     font-size: 1.25em;
-    text-align: center;
-    border: .1em solid white;
-    border-radius: 5px;
-    background-image: linear-gradient(red, white);
   }
 
-  #conocenosContent {
-    width: 90%;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 1em;
-    background-color: white;
+  #phoneNumber::before {
+    content: "";
+    display: block;
   }
 
-  #conocenosContent h3 {
-    margin: 0;
-    padding: 5px;
-    color: white;
-    background-image: linear-gradient(to right, red, white);
-    border-radius: 5px;
+  #contactanosContent p:nth-child(3)::before {
+    content: "";
+  }
+
+  #contactanosContent p:nth-child(3)::after {
+    content: "";
   }
 
   .productDescription {
@@ -502,102 +530,7 @@ Each of these assigns the specific image to the background sections*/
     font-size: 1em;
   }
 
-
+  .productDiv:first-of-type {
+    margin-top: 0;
+  }
 }
-
-
-/*#productos {
-  height: 70%;
-}
-
-#productBrowser {
-  position: relative;
-  height: 100%;
-  width: 200%;
-  left: -50%;
-  padding: 1em;
-  background-image: linear-gradient(to left, blue, #ccccff);
-}
-
-
-#productButtons {
-  position: relative;
-  margin: auto;
-  width: 90%;
-  top: 45%;
-  z-index: 2;
-}
-
-#productButtons button {
-  font-family: monospace;
-  font-size: 4em;
-  font-weight: bold;
-  color: white;
-  background-color: DodgerBlue;
-  border: 2px solid red;
-  border-radius: 5px;
-  transition: all 250ms;
-
-}
-
-#productButtons button:hover {
-  background-color: SkyBlue;
-}
-
-#leftButton {
-  float: left;
-}
-
-#rightButton {
-  float: right;
-}
-
-.productTitle {
-  text-align: center;
-  font-size: 1.75em;
-  font-weight: bold;
-  font-family: sans-serif;;
-}
-
-#menuDivs {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  top: -5%;
-  height: 90%;
-  width: 100%;
-}
-
-#menuDivLeft, #menuDivMiddle, #menuDivRight {
-  display: inline-block;
-  position: relative;
-  text-align: left;
-  width: 30%;
-  height: 100%;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px black;
-  transition: all 500ms;
-}
-
-#menuDivLeft {
-  left: -100%;
-}
-
-#menuDivMiddle {
-
-}
-
-#menuDivRight {
-  right: 100%;
-}
-
-.menuImg {
-  height: 90%;
-  z-index: 1;
-}
-
-#vendorMap {
-  width: 98vw;
-}*/
