@@ -3,7 +3,8 @@
     <title>Tron Insecticida</title>
     <link rel="stylesheet" type="text/css" href="tron.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
   </head>
   <body>
     <main id="inicio">
@@ -20,9 +21,10 @@
         </div>
         <a href="#conocenos">Conócenos</a>
         <a href="#inicio">Inicio</a>
-        <img src="tronLogo.gif" id="tronLogo">
+        <img src="tronLogo.png" id="tronLogo">
       </nav>
       <section class="fixedBackground" id="introFixed">
+        <div class="iPhone"></div>
       </section>
       <section class="standardContent spacer" id="conocenos">
         <div id="conocenosBox">
@@ -61,6 +63,7 @@
 
       </section>
       <section class="fixedBackground" id="productosFixed">
+        <div class="iPhone"></div>
       </section>
       <section class="standardContent spacer" id="productos">
         <div id="productBox">
@@ -75,6 +78,7 @@
         </div>
       </section>
       <section class="fixedBackground" id="contactanosFixed">
+        <div class="iPhone"></div>
       </section>
       <section class="standardContent spacer" id ="contactanos">
         <div id="contactanosBox">
@@ -86,8 +90,106 @@
             <p>Email: <a href="mailto:ventas@troninsecticida.com">ventas@troninsecticida.com</a></p>
           </div>
         </div>
+        <div id="contactBox">
+          <form method="post" action="contactUs.php" onsubmit="return checkForm()">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="name" placeholder="Nombre... (Necesario)">
+            <label for="email">Correo Electrónico</label>
+            <input type="text" id="email" name="email" placeholder="Correo Electrónico... (Necesario)">
+            <label for="estado">Estado</label>
+            <select id="estado" name="state">
+              <option value="Aguascalientes">Aguascalientes</option>
+              <option value="Baja California">Baja California</option>
+              <option value="Baja Californa Sur">Baja California Sur</option>
+              <option value="Campeche">Campeche</option>
+              <option value="Chiapas">Chiapas</option>
+              <option value="Ciudad de México">Ciudad de México</option>
+              <option value="Chihuahua">Chihuahua</option>
+              <option value="Coahuila">Coahuila</option>
+              <option value="Colima">Colima</option>
+              <option value="Durango">Durango</option>
+              <option value="Guanajuato">Guanajuato</option>
+              <option value="Guerrero">Guerrero</option>
+              <option value="Hidalgo">Hidalgo</option>
+              <option value="Jalisco">Jalisco</option>
+              <option value="México">México</option>
+              <option value="Michoacán">Michoacán</option>
+              <option value="Morelos">Morelos</option>
+              <option value="Nayarit">Nayarit</option>
+              <option value="Nuevo Leon">Nuevo León</option>
+              <option value="Oaxaca">Oaxaca</option>
+              <option value="Puebla">Puebla</option>
+              <option value="Querétaro">Querétaro</option>
+              <option value="Quintana Roo">Quintana Roo</option>
+              <option value="San Luis Potosí">San Luis Potosí</option>
+              <option value="Sinaloa">Sinaloa</option>
+              <option value="Sonora">Sonora</option>
+              <option value="Tabasco">Tabasco</option>
+              <option value="Tamaulipas">Tamaulipas</option>
+              <option value="Tlaxcala">Tlaxcala</option>
+              <option value="Veracruz">Veracruz</option>
+              <option value="Yucatán">Yucatán</option>
+              <option value="Zacatecas">Zacatecas</option>
+            </select>
+            <label for="subject">Mensaje</label>
+            <textarea id="subject" name="message" placeholder="Escribe aquí... (Necesario)" style="height:200px"></textarea>
+            <br />
+            <input type="submit" value="Enviar">
+
+          </form>
+        </div>
       </section>
     </main>
   </body>
+  <script>
 
+    let name = document.getElementById("nombre");
+    name.addEventListener("input", function(event) {
+      name.classList.remove("invalid");
+    });
+
+    let email = document.getElementById("email");
+    email.addEventListener("input", function(event) {
+      email.classList.remove("invalid");
+    });
+
+    let message = document.getElementById("subject");
+    message.addEventListener("input", function(event) {
+      message.classList.remove("invalid");
+    });
+
+    function checkForm() {
+      if (name.value === "") {
+        window.alert("Por favor, escribe su nombre");
+        name.classList.add("invalid");
+        return false;
+      }
+
+      if (email.value === "") {
+        window.alert("Por favor, introduce una dirección de correo electrónico válida");
+        email.classList.add("invalid");
+        return false;
+      }
+
+      if (email.value.indexOf("@", 0) < 0) {
+        window.alert("Por favor, introduce una dirección de correo electrónico válida");
+        email.classList.add("invalid");
+        return false;
+      }
+
+      if (email.value.indexOf(".", 0) < 0) {
+        window.alert("Por favor, introduce una dirección de correo electrónico válida");
+        email.classList.add("invalid");
+        return false;
+      }
+
+      if (message.value === "") {
+        window.alert("Por favor, escribe su mensaje");
+        message.classList.add("invalid");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
 </html>

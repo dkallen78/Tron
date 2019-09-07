@@ -1,10 +1,9 @@
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   width: 98vw;
+  height: 100vh;
+  overflow: scroll;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -113,7 +112,9 @@ main {
 .fixedBackground {
   min-height: 100vh;
   width: 98vw;
-  height: 100%;
+  /*height: 100vh;*/
+  background-size: 100vh;
+  -webkit-background-size: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -201,13 +202,13 @@ main {
 #productosFixed {
   background-image: url("productLineup.jpg");
   background-position: center bottom;
-  background-size: 100%;
+  /*background-size: 100%;*/
 }
 
 #productBox {
   display: grid;
-  grid-template-columns: 20vw 20vw;
-  grid-template-rows: 28.6vw 28.6vw;
+  grid-template-columns: 30vh 30vh;
+  grid-template-rows: 42.9vh 42.9vh;
   grid-gap: 1em;
   max-width: 98vw;
   justify-content: center;
@@ -240,18 +241,20 @@ main {
   background-size: cover;
 }
 
-.productCategory img {
-  width: 100%;
-  height: 100%;
-  border-radius: .5em;
-}
-
 /*---------------------------------------------------------------//
 // Contact us Image                                              //
 //---------------------------------------------------------------*/
 
 #contactanosFixed {
   background-image: url("contactUs.jpg");
+}
+
+#contactanos {
+  flex-direction: column;
+}
+
+#contactanosBox {
+  align-self: center;
 }
 
 #contactanosContent {
@@ -355,36 +358,48 @@ main {
 //---------------------------------------------------------------*/
 
 #contactBox {
-  margin-top: 6em;
+  margin-top: 5em;
   width: 98vw;
+}
+
+.invalid {
+  box-shadow: inset .1em .1em .3em red,
+              inset -.1em -.1em .3em red
+              !important;
+  background-color: #fcc;
 }
 
 #contactBox input[type=text], select, textarea {
   width: 100%;
   padding: 1%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: .3em;
   box-sizing: border-box;
-  margin-top: 1%;
-  margin-bottom: 2%;
+  margin-top: 1em;
+  margin-bottom: 2em;
   resize: vertical;
   font-size: 1.5em;
+  box-shadow: inset .1em .1em .3em black;
+
 }
 
 #contactBox input[type=submit] {
-  background-color: blue;
   color: white;
   padding: .5% 1%;
+  background-image: linear-gradient(red, white);
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 2em;
-  transition: all 250ms;
+  box-shadow: .1em .1em .3em black,
+              inset .05em .05em .2em white,
+              inset -.05em -.05em .2em darkblue;
+  text-shadow: .1em 0px .1em black,
+               0px .1em .1em black;
+  transition: all 500ms;
 }
 
 #contactBox input[type=submit]:hover {
-  background-color: dodgerblue;
-
+  filter: brightness(130%);
 }
 
 #contactBox form {
@@ -394,12 +409,43 @@ main {
 
 #contactBox label {
   font-size: 2em;
-  padding: 5px;
+  padding: .3em;
   color: white;
-  background-image: linear-gradient(to right, blue, dodgerblue);
-  border-radius: 5px;
-
+  background-image: linear-gradient(to right, red, white);
+  border-radius: .3em;
+  box-shadow: .1em .1em .3em black;
+  text-shadow: .1em 0px .1em black,
+               0px .1em .1em black;
 }
+
+#subject {
+  font-family: sans-serif;
+}
+
+#afterContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+#gracias {
+  width: 80vw;
+  height: 4em;
+  margin: 0 auto;
+  padding: .2em;
+  background-image: linear-gradient(to right, blue, blue, white);
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 2em;
+  text-align: center;
+  border-radius: .3em;
+  box-shadow: inset .1em .1em .3em black;
+  text-shadow: .1em .1em .3em black;
+}
+
+
 
 /*---------------------------------------------------------------//
 // Cellphone Styles                                              //
@@ -407,6 +453,7 @@ main {
 
 @media only screen and (max-width: 768px) {
   main {
+    width: 96vw;
     margin-top: 0;
   }
 
@@ -416,6 +463,7 @@ main {
     justify-content: center;
     top: 90vh;
     height: 10vh;
+    width: 96vw;
     padding: 0;
     font-size: 4vw;
     text-align: center;
@@ -470,6 +518,18 @@ main {
   }
 
   #introFixed {
+    /*background-image: url("fabricaShopSmall.jpg");*/
+    background-image: none;
+  }
+
+  .iPhone {
+    height: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  #introFixed .iPhone {
     background-image: url("fabricaShopSmall.jpg");
   }
 
@@ -482,26 +542,23 @@ main {
   }
 
   #productosFixed {
+    background-image: none;
+  }
+
+  #productosFixed .iPhone {
     background-image: url("productLineupSmall.jpg");
   }
 
   #productBox {
-    display: grid;
     grid-template-columns: 40vw 40vw;
     grid-template-rows: 57.2vw 57.2vw;
-    grid-gap: 1em;
-    max-width: 98vw;
-    justify-content: center;
-    align-content: center;
-  }
-
-  .productCategory img {
-    width: 100%;
-    height: 100%;
-    border-radius: .5em;
   }
 
   #contactanosFixed {
+    background-image: none;
+  }
+
+  #contactanosFixed .iPhone {
     background-image: url("contactUsSmall.jpg");
   }
 
@@ -532,5 +589,33 @@ main {
 
   .productDiv:first-of-type {
     margin-top: 0;
+  }
+
+  #contactBox {
+    margin-bottom: 6em;
+  }
+
+  #contactBox input[type=text], select, textarea {
+    font-size: 1.25em;
+  }
+
+  #contactBox label {
+    font-size: 1em;
+    border-radius: .3em;
+  }
+
+  #contactBox option {
+    font-size: .75em;
+  }
+
+  #contactBox input[type=submit] {
+    width: 100%;
+  }
+
+  #gracias {
+    height: 5em;
+    padding: .3em;
+    font-size: 1.5em;
+    line-height: 1.1em;
   }
 }
