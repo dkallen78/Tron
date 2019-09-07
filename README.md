@@ -1,6 +1,12 @@
 # Tron
 Website I'm building for Tron Insecticida www.TronInsecticida.com
 
+## 2019.09.06
+
+### Update 22:11 (Mexico)
+
+I don't like doing the boring stuff. I don't think anyone does. But today I wrote a PHP script to forward the contents of a form to an email address and I used a bit of JavaScript to do some basic validation of it. It's not live on the main Tron site yet but I'm going to do that tomorrow after I read a bit more about form validation and experiment a bit. I'm pretty proud of myself.
+
 ## 2019.09.05
 
 ### Update 21:56 (Mexico)
