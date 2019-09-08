@@ -145,14 +145,6 @@ main {
 // About us image                                                //
 //---------------------------------------------------------------*/
 
-/*.fixedBackground:nth-child(8) {
-  background-image: url("teamImage.jpg");
-}
-
-.fixedBackground:nth-child(10) {
-  background-image: url("IMG_7695.jpg");
-}*/
-
 .standardContent {
   display: flex;
   align-content: center;
@@ -367,6 +359,38 @@ main {
               inset -.1em -.1em .3em red
               !important;
   background-color: #fcc;
+  background-image: url("redX.png");
+  background-repeat: no-repeat;
+  background-position: 99% center;
+}
+
+.valid {
+  background-image: url("greenCheck.png");
+  background-repeat: no-repeat;
+  background-position: 99% center;
+}
+
+.formTips {
+  float: right;
+  margin-bottom: -1em;
+  margin-top: -1em;
+  padding: 1em;
+  font-size: 1.25em;
+  background-image: linear-gradient(to right, wheat, wheat, white);
+  border-radius: .3em;
+  box-shadow: .1em .1em .3em black;
+}
+
+#nameTips {
+  filter: opacity(0%);
+}
+
+#emailTips {
+  filter: opacity(0%);
+}
+
+#messageTips {
+  filter: opacity(0%);
 }
 
 #contactBox input[type=text], select, textarea {
@@ -445,8 +469,6 @@ main {
   text-shadow: .1em .1em .3em black;
 }
 
-
-
 /*---------------------------------------------------------------//
 // Cellphone Styles                                              //
 //---------------------------------------------------------------*/
@@ -518,7 +540,6 @@ main {
   }
 
   #introFixed {
-    /*background-image: url("fabricaShopSmall.jpg");*/
     background-image: none;
   }
 
@@ -593,6 +614,14 @@ main {
 
   #contactBox {
     margin-bottom: 6em;
+  }
+
+  .formTips {
+    margin-bottom: -1em;
+    margin-top: 0;
+    padding: .2em;
+    font-size: 1em;
+    box-shadow: .1em .1em .3em black;
   }
 
   #contactBox input[type=text], select, textarea {

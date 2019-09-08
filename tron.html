@@ -87,14 +87,16 @@
                por favor contáctanos:</strong></p>
             <p>Atención a Clientes: <span id="phoneNumber">(761) 73-409-93<span></p>
             <p>Jilotepec, Estado de México</p>
-            <p>Email: <a href="mailto:ventas@troninsecticida.com">ventas@troninsecticida.com</a></p>
+            <p id="emailContact"></p>
           </div>
         </div>
         <div id="contactBox">
           <form method="post" action="contactUs.php" onsubmit="return checkForm()">
             <label for="nombre">Nombre</label>
+            <span class="formTips" id="nameTips">Please use only letters and numbers</span>
             <input type="text" id="nombre" name="name" placeholder="Nombre... (Necesario)">
             <label for="email">Correo Electrónico</label>
+            <span class="formTips" id="emailTips">Please enter a valid email</span>
             <input type="text" id="email" name="email" placeholder="Correo Electrónico... (Necesario)">
             <label for="estado">Estado</label>
             <select id="estado" name="state">
@@ -132,6 +134,7 @@
               <option value="Zacatecas">Zacatecas</option>
             </select>
             <label for="subject">Mensaje</label>
+            <span class="formTips" id="messageTips">Special characters are not permitted</span>
             <textarea id="subject" name="message" placeholder="Escribe aquí... (Necesario)" style="height:200px"></textarea>
             <br />
             <input type="submit" value="Enviar">
@@ -143,22 +146,82 @@
   </body>
   <script>
 
+    let user = "ventas";
+    let domain = "troninsecticida.com";
+    let emailContact = document.getElementById("emailContact");
+    emailContact.innerHTML = "Email: <a href='mailto:" + user + "@" +
+                              domain + "'>" + user + "@" + domain + "</a>";
+
+    let nameReg = /^[a-zA-ZáéíñóúüÁÉÍÑÓÚÜ0-9\s]+$/
     let name = document.getElementById("nombre");
+    let nameTips = document.getElementById("nameTips");
     name.addEventListener("input", function(event) {
-      name.classList.remove("invalid");
+      if (name.value === "") {
+        name.classList.remove("invalid");
+        name.classList.remove("valid");
+        nameTips.style.filter = "opacity(0%)";
+      } else if (nameReg.test(name.value)) {
+        name.classList.remove("invalid");
+        name.classList.add("valid");
+        nameTips.style.filter = "opacity(0%)";
+      } else {
+        name.classList.add("invalid");
+        name.classList.remove("valid");
+        nameTips.style.filter = "opacity(100%)";
+      }
     });
 
+    let emailReg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{1,64}@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]){1,253}\.[a-zA-Z0-9-]{2,}$/
     let email = document.getElementById("email");
+    let emailTips = document.getElementById("emailTips");
     email.addEventListener("input", function(event) {
-      email.classList.remove("invalid");
+      if (email.value === "") {
+        email.classList.remove("invalid");
+        email.classList.remove("valid");
+        emailTips.style.filter = "opacity(0%)";
+      } else if (emailReg.test(email.value)) {
+        email.classList.remove("invalid");
+        email.classList.add("valid");
+        emailTips.style.filter = "opacity(0%)";
+      } else {
+        email.classList.add("invalid");
+        email.classList.remove("valid");
+        emailTips.style.filter = "opacity(100%)";
+      }
     });
 
+    let messageReg = /^[a-zA-ZáéíñóúüÁÉÍÑÓÚÜ0-9.,¡!#$%&'":;()*+/=¿?^_`{|}~-\s]+$/
     let message = document.getElementById("subject");
+    let messageTips = document.getElementById("messageTips");
     message.addEventListener("input", function(event) {
-      message.classList.remove("invalid");
+      if (message.value === "") {
+        message.classList.remove("invalid");
+        message.classList.remove("valid");
+        messageTips.style.filter = "opacity(0%)";
+      } else if (messageReg.test(message.value)) {
+        message.classList.remove("invalid");
+        message.classList.add("valid");
+        messageTips.style.filter = "opacity(0%)";
+      } else {
+        message.classList.add("invalid");
+        message.classList.remove("valid");
+        messageTips.style.filter = "opacity(100%)";
+      }
     });
 
     function checkForm() {
+      if (!nameReg.test(name.value)) {
+        return false;
+      }
+      if (!emailReg.test(email.value)) {
+        return false;
+      }
+      if (!messageReg.test(message.value)) {
+        return false;
+      }
+    }
+
+    /*function checkForm() {
       if (name.value === "") {
         window.alert("Por favor, escribe su nombre");
         name.classList.add("invalid");
@@ -190,6 +253,6 @@
       }
 
       return true;
-    }
+    }*/
   </script>
 </html>
