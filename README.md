@@ -1,6 +1,12 @@
 # Tron
 Website I'm building for Tron Insecticida www.TronInsecticida.com
 
+## 2019.09.07
+
+### Update 22:29 (Mexico)
+
+For some reason the boring stuff was more interesting today. I put in some regular expression form validation on the client side of my page and I'm working on putting in some tips for putting in valid data but I can't get it to display right in Chrome portrait mode. But it's late and I'm going to do it tomorrow. I'm happy with how it looks and behaves right now except for that.
+
 ## 2019.09.06
 
 ### Update 22:11 (Mexico)
