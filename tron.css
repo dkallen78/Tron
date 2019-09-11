@@ -393,6 +393,20 @@ main {
   filter: opacity(0%);
 }
 
+#sendTip {
+  position: relative;
+  width: 20vw;
+  bottom: 50vh;
+  margin: 0 auto;
+  padding: .5em;
+  background-image: linear-gradient(to right, wheat, wheat, white);
+  text-align: center;
+  font-size: 2em;
+  border-radius: .3em;
+  box-shadow: .1em .1em .3em black;
+  transition: 500ms;
+}
+
 #contactBox input[type=text], select, textarea {
   width: 100%;
   padding: 1%;
@@ -469,6 +483,29 @@ main {
   text-shadow: .1em .1em .3em black;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  padding: .5em;
+  background-image: linear-gradient(to left, blue, dodgerBlue);
+  font-size: 1.5em;
+}
+
+footer * {
+  padding: .2em .3em;
+  background-color: white;
+  border-radius: .3em;
+  box-shadow: inset .1em .1em .3em black;
+}
+
+#copyright {
+  margin-right: .5em;
+}
+
+#credit {
+  margin-left: .5em;
+}
+
 /*---------------------------------------------------------------//
 // Cellphone Styles                                              //
 //---------------------------------------------------------------*/
@@ -490,6 +527,7 @@ main {
     font-size: 4vw;
     text-align: center;
     border-top: none;
+    z-index: 5;
   }
 
   #tronLogo {
@@ -616,12 +654,25 @@ main {
     margin-bottom: 6em;
   }
 
+  .valid {
+    background-image: url("greenChecksmall.png");
+  }
+
+  .invalid {
+    background-image: url("redXsmall.png");
+  }
+
   .formTips {
     margin-bottom: -1em;
     margin-top: 0;
     padding: .2em;
-    font-size: 1em;
+    font-size: 3vw;
+    font-weight: bold;
     box-shadow: .1em .1em .3em black;
+  }
+
+  #sendTip {
+    width: 40vw;
   }
 
   #contactBox input[type=text], select, textarea {
@@ -646,5 +697,15 @@ main {
     padding: .3em;
     font-size: 1.5em;
     line-height: 1.1em;
+  }
+
+  footer {
+    width: 92vw;
+    margin-bottom: 10vh;
+    font-size: 1em;
+  }
+
+  #credit {
+    text-align: right;
   }
 }
