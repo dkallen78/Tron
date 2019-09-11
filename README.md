@@ -1,6 +1,12 @@
 # Tron
 Website I'm building for Tron Insecticida www.TronInsecticida.com
 
+## 2019.09.10
+
+### Update 23:02 (Mexico)
+
+I think I have everything working how I want it to. I had to play rough w/ yahoo.com.mx mail but I have email forwarding set up from my hosting provider to my client. I have a form. I have PHP. I have JavaScript. I'm comfortable walking away from this to get back to my other projects.
+
 ## 2019.09.07
 
 ### Update 22:29 (Mexico)
